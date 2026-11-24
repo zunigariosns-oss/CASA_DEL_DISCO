@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Configuración básica del documento -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Casa del Disco, tu tienda de discos musicales.">
+    <title>Casa del Disco | Inicio</title>
+
+    <!-- Conexión con la hoja de estilos principal -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Encabezado y navegación principal -->
+    <header class="encabezado">
+
+        <!-- Logotipo de la tienda -->
+        <a href="index.html" class="logo"> Casa del Disco</a>
+
+        <!-- Botón del menú hamburguesa -->
+        <button class="menu-hamburguesa" type="button"
+                aria-label="Abrir menú"
+                aria-expanded="false">
+            ☰
+        </button>
+
+        <!-- Menú de navegación -->
+        <nav aria-label="Navegación principal">
+            <ul class="menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="ofertas.html">Ofertas</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="carrito.html">🛒 Carrito</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contenido principal de la página -->
+    <main>
+
+        <!-- Banner principal de bienvenida -->
+        <section class="banner">
+            <article class="banner-contenido">
+
+                <!-- Texto de bienvenida -->
+                <p class="etiqueta">BIENVENIDO A CASA DEL DISCO</p>
+
+                <h1>La música que te gusta, en un solo lugar.</h1>
+
+                <p>
+                    Explora nuestro catálogo de discos musicales,
+                    descubre nuevos álbumes y encuentra tus favoritos.
+                </p>
+
+                <!-- Enlace para visitar el catálogo -->
+                <a href="productos.html" class="boton">
+                    Explorar catálogo
+                </a>
+            </article>
+        </section>
+
+        <!-- Sección informativa sobre la tienda -->
+        <section class="seccion">
+            <h2>¿Quiénes somos?</h2>
+
+            <p>
+                Casa del Disco es una plataforma web dedicada a la
+                venta de discos musicales. Nuestro objetivo es ofrecer
+                una experiencia de compra sencilla, atractiva y organizada.
+            </p>
+        </section>
+
+        <!-- Sección que presenta los productos y beneficios -->
+        <section class="seccion">
+            <h2>¿Qué encontrarás?</h2>
+
+            <!-- Tarjetas organizadas mediante Grid -->
+            <section class="tarjetas">
+
+                <article class="tarjeta">
+                    <span class="icono">♫</span>
+                    <h3>Discos musicales</h3>
+                    <p>Explora diferentes géneros y artistas.</p>
+                </article>
+
+                <article class="tarjeta">
+                    <span class="icono">▣</span>
+                    <h3>Álbumes</h3>
+                    <p>Encuentra álbumes de tus artistas favoritos.</p>
+                </article>
+
+                <article class="tarjeta">
+                    <span class="icono">♡</span>
+                    <h3>Compra sencilla</h3>
+                    <p>Consulta precios y organiza tus compras.</p>
+                </article>
+
+            </section>
+        </section>
+
+        <!-- Sección final para invitar a explorar productos -->
+        <section class="llamada">
+            <h2>¡Encuentra tu próxima canción favorita!</h2>
+            <a href="productos.html" class="boton">Ver productos</a>
+        </section>
+
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="pie">
+        <p>&copy; 2026 Casa del Disco. Todos los derechos reservados.</p>
+        <p>Proyecto escolar - 5-A Programación</p>
+    </footer>
+
+    <!-- Archivo JavaScript principal -->
+    <script src="main.js"></script>
+
+</body>
+</html>
