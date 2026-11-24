@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Configuración del documento -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Casa del Disco</title>
+
+    <!-- Hoja de estilos principal -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Encabezado y menú de navegación -->
+    <header class="encabezado">
+        <a href="index.html" class="logo"> Casa del Disco</a>
+
+        <button class="menu-hamburguesa" type="button"
+                aria-label="Abrir menú"
+                aria-expanded="false">
+            ☰
+        </button>
+
+        <nav aria-label="Navegación principal">
+            <ul class="menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="ofertas.html">Ofertas</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="contacto.html" aria-current="page">Contacto</a></li>
+                <li><a href="carrito.html">🛒 Carrito</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contenido principal -->
+    <main>
+
+        <!-- Título de la página -->
+        <section class="titulo-pagina">
+            <h1>Contáctanos</h1>
+            <p>¿Tienes alguna duda? Escríbenos.</p>
+        </section>
+
+        <!-- Contenedor del formulario -->
+        <section class="formulario-contenedor">
+
+            <form class="formulario" action="#" method="get">
+
+                <!-- Grupo de información del cliente -->
+                <fieldset>
+                    <legend>Información del cliente</legend>
+
+                    <!-- Campo para el nombre completo -->
+                    <label for="nombre">Nombre completo:</label>
+                    <input type="text" id="nombre" name="nombre"
+                           placeholder="Ej. Juan Pérez Sánchez"
+                           minlength="3" maxlength="80" required>
+
+                    <!-- Campo para el correo electrónico -->
+                    <label for="correo">Correo electrónico:</label>
+                    <input type="email" id="correo" name="correo"
+                           placeholder="ejemplo@gmail.com" required>
+
+                    <!-- Campo para el teléfono -->
+                    <label for="telefono">Teléfono:</label>
+                    <input type="tel" id="telefono" name="telefono"
+                           placeholder="4771234567"
+                           pattern="[0-9]{10}"
+                           title="Ingresa 10 dígitos" required>
+
+                    <!-- Lista para seleccionar el asunto -->
+                    <label for="asunto">Asunto:</label>
+                    <select id="asunto" name="asunto" required>
+
+                        <!-- Opción inicial deshabilitada -->
+                        <option value="" disabled selected>
+                            Selecciona una opción
+                        </option>
+
+                        <option value="productos">Información de productos</option>
+                        <option value="compras">Información de compras</option>
+                        <option value="pagos">Métodos de pago</option>
+                        <option value="otro">Otro</option>
+                    </select>
+
+                    <!-- Área para escribir el mensaje -->
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje"
+                              rows="5" minlength="10" maxlength="500"
+                              placeholder="Escribe tu mensaje..."
+                              required></textarea>
+
+                    <!-- Casilla de aceptación -->
+                    <label class="aceptacion">
+                        <input type="checkbox" name="privacidad" required>
+                        Acepto el envío de este formulario.
+                    </label>
+
+                    <!-- Botón para enviar el formulario -->
+                    <button type="submit" class="boton">
+                        Enviar mensaje
+                    </button>
+
+                </fieldset>
+
+                <!-- Área para mensajes de validación -->
+                <div id="mensaje-validacion" role="alert"></div>
+
+            </form>
+        </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="pie">
+        <p>&copy; 2026 Casa del Disco.</p>
+        <p>Proyecto escolar - 5-A Programación</p>
+    </footer>
+
+    <!-- Archivo JavaScript principal -->
+    <script src="main.js"></script>
+
+</body>
+</html>

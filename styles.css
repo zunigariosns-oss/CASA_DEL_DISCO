@@ -1,0 +1,819 @@
+/* =========================================
+   1. VARIABLES GLOBALES
+   Aquí se definen los colores y valores
+   principales que utiliza todo el sitio.
+========================================= */
+
+:root {
+    --color-fondo: #442D1C;
+    --color-superficie: #B59E7D;
+    --color-negro: #000000;
+    --color-dorado: #946C18;
+    --color-blanco: #ffffff;
+    --color-texto: #ffff;
+    --color-borde: #343446;
+    --radio-borde: 14px;
+    --sombra-caja: 0 8px 25px rgba(0, 0, 0, .25);
+}
+
+/* =========================================
+   2. CONFIGURACIÓN GENERAL
+   Se eliminan márgenes y rellenos por defecto.
+   Se utiliza border-box para controlar tamaños.
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Desplazamiento suave entre secciones */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Estilos generales del cuerpo */
+body {
+    background: var(--color-fondo);
+    color: var(--color-blanco);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    min-width: 320px;
+}
+
+/* Configuración de las imágenes */
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/* Configuración de los enlaces */
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Altura de línea de los encabezados */
+h1, h2, h3 {
+    line-height: 1.2;
+}
+
+/* Color general de los párrafos */
+p {
+    color: var(--color-texto);
+}
+
+/* =========================================
+   3. ENCABEZADO Y MENÚ
+   Se utiliza FLEXBOX para organizar el logo
+   y los enlaces de navegación.
+========================================= */
+
+.encabezado {
+    background: var(--color-superficie);
+    padding: 18px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    border-bottom: 1px solid var(--color-borde);
+}
+
+/* Estilo del logotipo */
+.logo {
+    color: var(--color-negro);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Organización horizontal del menú */
+.menu {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    list-style: none;
+}
+
+/* Apariencia de los enlaces */
+.menu a {
+    color: var(--color-texto);
+    transition: color .3s;
+}
+
+/* Efecto al pasar el cursor y página actual */
+.menu a:hover,
+.menu a[aria-current="page"] {
+    color: var(--color-dorado);
+}
+
+/* =========================================
+   4. BANNER PRINCIPAL
+   Presenta la bienvenida de la página.
+   Utiliza una imagen de fondo y FLEXBOX.
+========================================= */
+
+.banner {
+    min-height: 440px;
+    padding: 70px 7%;
+    display: flex;
+    align-items: center;
+    background:
+        linear-gradient(90deg, #101018 15%, rgba(16,16,24,.75)),
+        url("pngtree-vintage-vinyl-record-player-with-records-by-window-in-warm-sunlight-image_22659175.webp")
+        center/cover no-repeat;
+}
+
+/* Limita el ancho del contenido del banner */
+.banner-contenido {
+    max-width: 650px;
+}
+
+/* Texto pequeño de bienvenida */
+.etiqueta {
+    color: var(--color-dorado);
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+/* Título principal del banner */
+.banner h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin-bottom: 20px;
+}
+
+/* Espaciado de los párrafos del banner */
+.banner p {
+    margin-bottom: 25px;
+}
+
+/* =========================================
+   5. BOTONES
+   Estilos compartidos por los botones
+   y enlaces que funcionan como botones.
+========================================= */
+
+.boton {
+    display: inline-block;
+    background: var(--color-negro);
+    color: var(--color-blanco);
+    border: none;
+    padding: 12px 22px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background .3s, transform .3s;
+}
+
+/* Efecto visual al pasar el cursor */
+.boton:hover {
+    background: var(--color-dorado);
+    transform: translateY(-2px);
+}
+
+/* =========================================
+   6. SECCIONES GENERALES
+   Organizan los apartados informativos.
+========================================= */
+
+.seccion {
+    padding: 65px 7%;
+    text-align: center;
+}
+
+/* Títulos de las secciones */
+.seccion h2 {
+    color: var(--color-dorado);
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+/* Centra y limita el ancho de los párrafos */
+.seccion > p {
+    max-width: 750px;
+    margin: auto;
+}
+
+/* =========================================
+   7. TARJETAS Y SERVICIOS
+   Se utiliza CSS GRID para distribuir
+   las tarjetas en columnas.
+========================================= */
+
+.tarjetas,
+.servicios {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    margin-top: 35px;
+}
+
+/* Diseño individual de cada tarjeta */
+.tarjeta {
+    background: var(--color-superficie);
+    border: 1px solid var(--color-borde);
+    padding: 30px 20px;
+    border-radius: var(--radio-borde);
+    box-shadow: var(--sombra-caja);
+}
+
+/* Títulos de las tarjetas */
+.tarjeta h2,
+.tarjeta h3 {
+    color: var(--color-negro);
+    margin: 12px 0;
+}
+
+/* Iconos decorativos */
+.icono {
+    color: var(--color-dorado);
+    font-size: 2.5rem;
+}
+
+/* =========================================
+   8. LLAMADA A LA ACCIÓN
+   Se utiliza para destacar invitaciones
+   a explorar los productos.
+========================================= */
+
+.llamada {
+    background: var(--color-superficie);
+    padding: 55px 7%;
+    text-align: center;
+}
+
+/* Espacio debajo del título */
+.llamada h2 {
+    margin-bottom: 20px;
+}
+
+/* =========================================
+   9. TÍTULOS DE PÁGINAS
+   Presentación de cada apartado del sitio.
+========================================= */
+
+.titulo-pagina {
+    text-align: center;
+    padding: 55px 7%;
+    background: var(--color-superficie);
+}
+
+/* Título principal de cada página */
+.titulo-pagina h1 {
+    font-size: 2.5rem;
+    color: var(--color-dorado);
+    margin-bottom: 12px;
+}
+
+/* =========================================
+   10. CATÁLOGO DE PRODUCTOS
+   Se utiliza GRID para distribuir
+   los productos en cuatro columnas.
+========================================= */
+
+.catalogo {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 25px;
+    padding: 55px 7%;
+}
+
+/* Tarjeta individual de cada producto */
+.producto {
+    background: var(--color-superficie);
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-borde);
+    padding: 15px;
+    overflow: hidden;
+    min-width: 0;
+}
+
+/* Imagen del producto */
+.producto img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Nombre del producto */
+.producto h2 {
+    font-size: 1.2rem;
+    margin: 15px 0 8px;
+}
+
+/* Espaciado de las descripciones */
+.producto p {
+    margin-bottom: 10px;
+}
+
+/* Precio actual */
+.precio {
+    color: var(--color-dorado);
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* =========================================
+   11. SERVICIOS
+   Se organizan las tarjetas en dos columnas.
+========================================= */
+
+.servicios {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding: 45px 7%;
+}
+
+/* Lista de pasos de compra */
+.pasos {
+    max-width: 600px;
+    margin: 25px auto;
+    text-align: left;
+}
+
+/* Apariencia de cada paso */
+.pasos li {
+    padding: 8px;
+    color: var(--color-texto);
+}
+
+/* Texto de avisos */
+.aviso {
+    margin-top: 20px;
+    font-size: .9rem;
+}
+
+/* =========================================
+   12. FORMULARIOS
+   Estilos para contacto y métodos de pago.
+========================================= */
+
+/* Contenedor exterior */
+.formulario-contenedor {
+    padding: 45px 7%;
+}
+
+/* Diseño principal del formulario */
+.formulario {
+    max-width: 650px;
+    margin: auto;
+    background: var(--color-superficie);
+    padding: 30px;
+    border-radius: var(--radio-borde);
+    box-shadow: var(--sombra-caja);
+}
+
+/* Borde del grupo de campos */
+.formulario fieldset {
+    border: 1px solid var(--color-borde);
+    border-radius: 10px;
+    padding: 20px;
+    min-width: 0;
+}
+
+/* Título del grupo de campos */
+.formulario legend {
+    color: var(--color-dorado);
+    padding: 0 10px;
+    font-weight: bold;
+}
+
+/* Etiquetas de los campos */
+.formulario label:not(.aceptacion) {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 6px;
+}
+
+/* Apariencia de inputs, listas y áreas de texto */
+.formulario input:not([type="checkbox"]),
+.formulario select,
+.formulario textarea {
+    width: 100%;
+    padding: 12px;
+    background: var(--color-fondo);
+    border: 1px solid var(--color-borde);
+    color: var(--color-blanco);
+    border-radius: 8px;
+    font: inherit;
+}
+
+/* Permite cambiar verticalmente el tamaño del mensaje */
+.formulario textarea {
+    resize: vertical;
+}
+
+/* Efecto cuando un campo está seleccionado */
+.formulario input:focus,
+.formulario select:focus,
+.formulario textarea:focus {
+    outline: 2px solid var(--color-negro);
+}
+
+/* Organización de la casilla de aceptación */
+.aceptacion {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 18px 0;
+    color: var(--color-texto);
+}
+
+/* Botones de envío ocupan todo el ancho */
+.formulario button {
+    width: 100%;
+}
+
+/* =========================================
+   13. PIE DE PÁGINA
+   Se utiliza FLEXBOX para organizar
+   los textos horizontalmente.
+========================================= */
+
+.pie {
+    background: var(--color-superficie);
+    border-top: 1px solid var(--color-borde);
+    padding: 25px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    text-align: center;
+}
+
+/* =========================================
+   14. RESPONSIVE DESIGN
+   Adaptación del contenido a diferentes
+   tamaños de pantalla.
+========================================= */
+
+/* LAPTOP: 1024px en adelante */
+@media (min-width: 1024px) {
+
+    /* Cuatro columnas en el catálogo */
+    .catalogo {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
+
+/* TABLET: 768px a 1023px */
+@media (min-width: 768px) and (max-width: 1023px) {
+
+    /* Dos columnas para productos */
+    .catalogo {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    /* Dos columnas para tarjetas */
+    .tarjetas {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    /* Dos columnas para servicios */
+    .servicios {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    /* Centra el encabezado */
+    .encabezado {
+        justify-content: center;
+    }
+}
+
+/* MÓVIL: menos de 768px */
+@media (max-width: 767px) {
+
+    /* Coloca el encabezado en vertical */
+    .encabezado {
+        flex-direction: column;
+        padding: 18px 5%;
+    }
+
+    /* Centra los enlaces del menú */
+    .menu {
+        justify-content: center;
+        gap: 12px 18px;
+    }
+
+    /* Ajusta el banner */
+    .banner {
+        min-height: 380px;
+        padding: 45px 6%;
+    }
+
+    /* Reduce el tamaño del título */
+    .banner h1 {
+        font-size: 2rem;
+    }
+
+    /* Una columna para los catálogos y tarjetas */
+    .catalogo,
+    .tarjetas,
+    .servicios {
+        grid-template-columns: minmax(0, 1fr);
+        padding: 30px 5%;
+    }
+
+    /* Reduce el espacio de las secciones */
+    .seccion {
+        padding: 40px 5%;
+    }
+
+    /* Ajusta los títulos */
+    .titulo-pagina {
+        padding: 40px 5%;
+    }
+
+    .titulo-pagina h1 {
+        font-size: 2rem;
+    }
+
+    /* Ajusta los formularios */
+    .formulario-contenedor {
+        padding: 30px 5%;
+    }
+
+    .formulario {
+        padding: 15px;
+    }
+
+    /* Organiza el pie de página verticalmente */
+    .pie {
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+/* =========================================
+   15. EVITAR DESBORDAMIENTOS HORIZONTALES
+   Evita que los elementos excedan el ancho
+   disponible de la pantalla.
+========================================= */
+
+body,
+main,
+section,
+article,
+header,
+footer {
+    max-width: 100%;
+}
+
+/* Permite dividir palabras y textos largos */
+.menu a,
+.boton {
+    overflow-wrap: anywhere;
+}
+
+/* =========================================
+   16. SECCIÓN DE OFERTAS
+   Estilos especiales para descuentos
+   y precios anteriores.
+========================================= */
+
+/* Etiqueta que muestra el porcentaje de descuento */
+.descuento {
+    display: inline-block;
+    background: var(--color-dorado);
+    color: white;
+    font-weight: bold;
+    padding: 6px 12px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+}
+
+/* Precio original tachado */
+.precio-anterior {
+    color: #1f0808;
+    text-decoration: line-through;
+    margin-bottom: 0;
+}
+
+/* Precio con descuento */
+.precio {
+    color: var(--color-dorado);
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+/* Espaciado entre los botones de las ofertas */
+.producto .boton {
+    margin: 3px 2px;
+}
+
+/* =========================================
+   17. CARRITO DE COMPRAS
+   GRID organiza la tabla y el resumen
+   en dos columnas.
+========================================= */
+
+/* Contenedor general del carrito */
+.carrito-contenedor {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(240px, 1fr);
+    gap: 25px;
+    padding: 45px 7%;
+    align-items: start;
+}
+
+/* Tabla de productos seleccionados */
+.tabla-carrito {
+    background: var(--color-superficie);
+    padding: 25px;
+    border-radius: var(--radio-borde);
+    overflow-x: auto;
+}
+
+/* Título de la tabla */
+.tabla-carrito h2 {
+    color: var(--color-dorado);
+    margin-bottom: 20px;
+}
+
+/* Configuración de la tabla */
+.tabla-carrito table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+/* Celdas de encabezados y contenido */
+.tabla-carrito th,
+.tabla-carrito td {
+    padding: 15px 10px;
+    border-bottom: 1px solid var(--color-borde);
+}
+
+/* Color de los encabezados */
+.tabla-carrito th {
+    color: var(--color-negro);
+}
+
+/* Color del contenido */
+.tabla-carrito td {
+    color: var(--color-texto);
+}
+
+/* =========================================
+   RESUMEN DE COMPRA
+========================================= */
+
+/* Tarjeta lateral del resumen */
+.resumen {
+    background: var(--color-superficie);
+    border: 1px solid var(--color-borde);
+    padding: 25px;
+    border-radius: var(--radio-borde);
+}
+
+/* Título del resumen */
+.resumen h2 {
+    color: var(--color-dorado);
+    margin-bottom: 20px;
+}
+
+/* Distribución de los datos */
+.resumen p {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+/* Total de la compra */
+.resumen h3 {
+    color: var(--color-dorado);
+    margin: 20px 0;
+}
+
+/* Botón del resumen */
+.resumen .boton {
+    display: block;
+    text-align: center;
+}
+
+/* =========================================
+   18. RESPONSIVE DEL CARRITO
+========================================= */
+
+/* TABLET */
+@media (min-width: 768px) and (max-width: 1023px) {
+
+    /* El resumen pasa debajo de la tabla */
+    .carrito-contenedor {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* MÓVIL */
+@media (max-width: 767px) {
+
+    /* Una sola columna para el carrito */
+    .carrito-contenedor {
+        grid-template-columns: minmax(0, 1fr);
+        padding: 25px 5%;
+    }
+
+    /* Reduce el relleno de la tabla */
+    .tabla-carrito {
+        padding: 12px;
+    }
+
+    /* Reduce el tamaño de las celdas */
+    .tabla-carrito th,
+    .tabla-carrito td {
+        padding: 10px 6px;
+        font-size: .8rem;
+    }
+
+    /* El resumen ocupa todo el ancho */
+    .resumen {
+        width: 100%;
+    }
+}
+
+
+/* =========================================
+   19. MENÚ HAMBURGUESA
+   Menú interactivo para dispositivos móviles.
+========================================= */
+
+.menu-hamburguesa {
+    display: none;
+    background: var(--color-negro);
+    color: var(--color-blanco);
+    border: none;
+    padding: 8px 14px;
+    font-size: 1.8rem;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+@media (max-width: 767px) {
+
+    .menu-hamburguesa {
+        display: block;
+    }
+
+    .encabezado nav {
+        display: none;
+        width: 100%;
+    }
+
+    .encabezado nav.menu-activo {
+        display: block;
+    }
+
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 15px;
+    }
+}
+
+
+/* =========================================
+   20. VALIDACIÓN DEL FORMULARIO
+   Mensajes visuales de error y éxito.
+========================================= */
+
+.campo-error {
+    border: 2px solid #ff3333 !important;
+}
+
+.campo-correcto {
+    border: 2px solid #28a745 !important;
+}
+
+.mensaje-error {
+    display: block;
+    color: #b00000;
+    font-size: 0.9rem;
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+#mensaje-validacion {
+    margin-top: 15px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.mensaje-exito {
+    color: #155724;
+    background: #d4edda;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+.mensaje-general-error {
+    color: #721c24;
+    background: #f8d7da;
+    padding: 12px;
+    border-radius: 8px;
+}

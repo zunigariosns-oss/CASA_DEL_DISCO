@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Configuración del documento -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos | Casa del Disco</title>
+
+    <!-- Hoja de estilos -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Encabezado y menú de navegación -->
+    <header class="encabezado">
+        <a href="index.html" class="logo">Casa del Disco</a>
+
+        <button class="menu-hamburguesa" type="button"
+                aria-label="Abrir menú"
+                aria-expanded="false">
+            ☰
+        </button>
+
+        <nav aria-label="Navegación principal">
+            <ul class="menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html" aria-current="page">Productos</a></li>
+                <li><a href="ofertas.html">Ofertas</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="carrito.html">🛒 Carrito</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contenido principal -->
+    <main>
+
+        <!-- Título y descripción del catálogo -->
+        <section class="titulo-pagina">
+            <h1>Nuestros productos</h1>
+            <p>Descubre nuestra colección de discos y álbumes musicales.</p>
+        </section>
+
+        <!-- Catálogo de productos organizado mediante Grid -->
+        <section class="catalogo">
+
+            <!-- Producto 1 -->
+            <article class="producto">
+                <img src="il_fullxfull.1941139369_pebo.webp"
+                     alt="Disco de vinilo">
+
+                <h2>BAD</h2>
+                <p>Disco de colección. Autor: Michael Jackson</p>
+                <p class="precio">$5500 MXN</p>
+
+                <a href="contacto.html" class="boton">¿Dudas?</a>
+
+                <button type="button" class="boton"
+                    data-agregar
+                    data-nombre="BAD"
+                    data-precio="5500">
+                    Agregar al carrito
+                </button>
+            </article>
+
+            <!-- Producto 2 -->
+            <article class="producto">
+                <img src="images.jpg"
+                     alt="Colección de álbumes">
+
+                <h2>LA GRAN SEÑORA</h2>
+                <p>Álbum musical de colección. Autora: Jenni Rivera</p>
+                <p class="precio">$3580 MXN</p>
+
+                <a href="contacto.html" class="boton">¿Dudas?</a>
+
+                <button type="button" class="boton"
+                    data-agregar
+                    data-nombre="LA GRAN SEÑORA"
+                    data-precio="3580">
+                    Agregar al carrito
+                </button>
+            </article>
+
+            <!-- Producto 3 -->
+            <article class="producto">
+                <img src="71XlKT4yMJL._UF350,350_QL80_.jpg"
+                     alt="Discos musicales">
+
+                <h2>BARRIO FINO</h2>
+                <p>Disco de colección. Autor: Daddy Yankee</p>
+                <p class="precio">$4450 MXN</p>
+
+                <a href="contacto.html" class="boton">¿Dudas?</a>
+
+                <button type="button" class="boton"
+                    data-agregar
+                    data-nombre="BARRIO FINO"
+                    data-precio="4450">
+                    Agregar al carrito
+                </button>
+            </article>
+
+            <!-- Producto 4 -->
+            <article class="producto">
+                <img src="images.jfif"
+                     alt="Disco de música">
+
+                <h2>111</h2>
+                <p>Álbum de colección (Edición limitada). Autor: Milo J</p>
+                <p class="precio">$4560 MXN</p>
+
+                <a href="contacto.html" class="boton">¿Dudas?</a>
+
+                <button type="button" class="boton"
+                    data-agregar
+                    data-nombre="111"
+                    data-precio="4560">
+                    Agregar al carrito
+                </button>
+            </article>
+
+        </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="pie">
+        <p>&copy; 2026 Casa del Disco.</p>
+        <p>Proyecto escolar - 5-A Programación</p>
+    </footer>
+
+    <!-- Archivos JavaScript -->
+    <script src="carrito.js"></script>
+    <script src="main.js"></script>
+
+</body>
+</html>

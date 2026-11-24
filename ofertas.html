@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Configuración del documento -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ofertas | Casa del Disco</title>
+
+    <!-- Hoja de estilos -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Encabezado y menú -->
+    <header class="encabezado">
+        <a href="index.html" class="logo"> Casa del Disco</a>
+
+        <button class="menu-hamburguesa" type="button"
+                aria-label="Abrir menú"
+                aria-expanded="false">
+            ☰
+        </button>
+
+        <nav aria-label="Navegación principal">
+            <ul class="menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="ofertas.html" aria-current="page">Ofertas</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="carrito.html">🛒 Carrito</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contenido principal -->
+    <main>
+
+        <!-- Presentación de ofertas -->
+        <section class="titulo-pagina">
+            <h1>¡Ofertas especiales!</h1>
+            <p>Encuentra tus discos favoritos a precios increíbles.</p>
+        </section>
+
+        <!-- Catálogo de ofertas -->
+        <section class="catalogo">
+
+            <!-- Primera oferta -->
+            <article class="producto">
+                <span class="descuento">-45%</span>
+
+                <img src="imagen.jfif"
+                     alt="Disco de vinilo en oferta">
+
+                <h2>Un Verano Sin Ti</h2>
+                <p>Disco de colección.Autor: Bad Bunny</p>
+                <p class="precio-anterior">$1550 MXN</p>
+                <p class="precio">$852 MXN</p>
+
+                <a href="carrito.html" class="boton">Ver carrito</a>
+
+                <button type="button" class="boton"
+                    data-agregar
+                    data-nombre="Un Verano Sin Ti"
+                    data-precio="852">
+                    Agregar al carrito
+                </button>
+            </article>
+
+            <!-- Segunda oferta -->
+            <article class="producto">
+                <span class="descuento">-30%</span>
+
+                <img src="images (1).jfif"
+                     alt="Álbum musical en oferta">
+
+                <h2>542</h2>
+                <p>Álbum musical de colección. Autor: C.R.O</p>
+                <p class="precio-anterior">$2380 MXN</p>
+                <p class="precio">$1666 MXN</p>
+
+                <a href="carrito.html" class="boton">Ver carrito</a>
+
+                <button type="button" class="boton"
+                    data-agregar
+                    data-nombre="542"
+                    data-precio="1666">
+                    Agregar al carrito
+                </button>
+            </article>
+
+            <!-- Tercera oferta -->
+            <article class="producto">
+                <span class="descuento">-10%</span>
+
+                <img src="ab67616d0000b273ef88ad49166e31598ff7d4d0.jfif"
+                     alt="Colección de discos musicales">
+
+                <h2>$AD BOYZ 4 LIFE II</h2>
+                <p>Álbum de colección. Autor: Junior h</p>
+                <p class="precio-anterior">$1450 MXN</p>
+                <p class="precio">$1305 MXN</p>
+
+                <a href="carrito.html" class="boton">Ver carrito</a>
+
+                <button type="button" class="boton"
+                    data-agregar
+                    data-nombre="$AD BOYZ 4 LIFE II"
+                    data-precio="1305">
+                    Agregar al carrito
+                </button>
+            </article>
+
+        </section>
+
+        <!-- Invitación para seguir explorando -->
+        <section class="llamada">
+            <h2>¡No dejes pasar estas promociones!</h2>
+            <p>Visita nuestro catálogo y encuentra más música.</p>
+            <a href="productos.html" class="boton">Ver productos</a>
+        </section>
+
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="pie">
+        <p>&copy; 2026 Casa del Disco.</p>
+        <p>Proyecto escolar - 5-A Programación</p>
+    </footer>
+
+    <!-- Archivos JavaScript -->
+    <script src="carrito.js"></script>
+    <script src="main.js"></script>
+
+</body>
+</html>

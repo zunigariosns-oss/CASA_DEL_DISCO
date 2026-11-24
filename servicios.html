@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Configuración del documento -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios | Casa del Disco</title>
+
+    <!-- Conexión con los estilos -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Encabezado y navegación -->
+    <header class="encabezado">
+        <a href="index.html" class="logo">Casa del Disco</a>
+
+        <button class="menu-hamburguesa" type="button"
+                aria-label="Abrir menú"
+                aria-expanded="false">
+            ☰
+        </button>
+
+        <nav aria-label="Navegación principal">
+            <ul class="menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="ofertas.html">Ofertas</a></li>
+                <li><a href="servicios.html" aria-current="page">Servicios</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="carrito.html">🛒 Carrito</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contenido principal -->
+    <main>
+
+        <!-- Presentación de servicios -->
+        <section class="titulo-pagina">
+            <h1>Nuestros servicios</h1>
+            <p>Conoce cómo funciona Casa del Disco.</p>
+        </section>
+
+        <!-- Tarjetas de servicios -->
+        <section class="servicios">
+
+            <article class="tarjeta">
+                <span class="icono">♫</span>
+                <h2>Catálogo musical</h2>
+                <p>
+                    Consulta los discos disponibles, sus portadas,
+                    autores y precios.
+                </p>
+            </article>
+
+            <article class="tarjeta">
+                <span class="icono">◎</span>
+                <h2>Registro de clientes</h2>
+                <p>
+                    Los usuarios podrán registrarse para acceder
+                    a las funciones de la plataforma.
+                </p>
+            </article>
+
+            <article class="tarjeta">
+                <span class="icono">▣</span>
+                <h2>Transferencia bancaria</h2>
+                <p>
+                    Realiza tus compras mediante transferencia
+                    bancaria de manera sencilla.
+                </p>
+            </article>
+
+            <article class="tarjeta">
+                <span class="icono">✓</span>
+                <h2>Comprobante de compra</h2>
+                <p>
+                    Después de finalizar una compra se mostrará
+                    un resumen con los datos de los productos adquiridos.
+                </p>
+            </article>
+
+        </section>
+
+        <!-- Explicación de los pasos de compra -->
+        <section class="seccion">
+            <h2>Proceso de compra</h2>
+
+            <ol class="pasos">
+                <li>Explorar el catálogo de discos.</li>
+                <li>Seleccionar los productos deseados.</li>
+                <li>Agregar los productos al carrito.</li>
+                <li>Realizar la transferencia bancaria.</li>
+                <li>Consultar el resumen de compra.</li>
+                <li>Finalizar la compra.</li>
+            </ol>
+        </section>
+
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="pie">
+        <p>&copy; 2026 Casa del Disco.</p>
+        <p>Proyecto escolar - 5-A Programación</p>
+    </footer>
+
+    <!-- Archivo JavaScript principal -->
+    <script src="main.js"></script>
+
+</body>
+</html>
